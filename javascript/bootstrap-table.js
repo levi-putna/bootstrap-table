@@ -20,7 +20,7 @@
 			nourl : "<strong>Oh snap!</strong> We couldn't finde a url to load this table.",
 			loadFail : "<strong>Oh snap!</strong> The table failed to load from the remote url.",
 			requestError : "<strong>Oh snap!</strong> The server responded incorectaly.",
-			noRecords : "<strong>Heads up!</strong> No records where found"
+			noRecords : "<strong>Heads up!</strong> No records where found."
 		};
 		
 		//the number of columns in this table
@@ -122,8 +122,8 @@
 				}
 			});
 			
-			request.fail(function(jqXHR, textStatus) {
-			  base.errorMessage(base.message.loadFail);
+			request.fail(function(jqXHR, textStatus, error) {
+			  base.errorMessage(base.message.loadFail + " (" + jqXHR.status + ") " + error);
 			});
         };
 
