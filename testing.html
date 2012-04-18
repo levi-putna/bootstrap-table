@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Twitter Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">	
+	<link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="http://twitter.github.com/bootstrap/assets/css/docs.css" rel="stylesheet">
+	<link href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+
+  <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          </a>
+          <a class="brand" href="./index.html">Bootstrap Table</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li>
+                <a href="./index#overview">Overview</a>
+              </li>
+              <li class="">
+                <a href="./index#base-html">Base HTML</a>
+              </li>
+			<li class="">
+                <a href="./index#examples">Examples</a>
+              </li>
+              <li class="">
+                <a href="./index#javascript">Javascript plugins</a>
+              </li>
+				<li class="divider-vertical"></li>
+				<li class="active">
+	               <a href="./testing.html">Testing</a>
+	            </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+
+<header class="jumbotron masthead">
+	<h1>Table Test</h1>
+  <p class="lead">The Test table represents the bootstrap table test, the Expected Result is a hard coded HTML table that. If the test passes the two tables should produce the same html. </p>
+</header><!-- /.marketing -->
+
+<hr class="soften">
+
+
+<!-- ===== Full Test ===== -->
+<section>
+  	<h2>Sucess</h2>
+	<p>When no url is provided</p>
+	
+	<div class="row">
+    <div class="span6">
+	<h3>Test</h3>
+		<table data-role="table" url="./json/full-test.json" size="3" class="table table-bordered table-striped">
+		<thead>
+	      <tr>
+	        <th data-id="column-1">Column 1</th>
+	        <th data-id="column-2">Column 2</th>
+	        <th data-id="column-3">Column 3</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	    </tbody>
+	  </table>
+	</div>
+	<div class="span6">
+		<h3>Expected Result</h3>
+		<table class="table table-bordered table-striped">
+		<thead>
+	      <tr>
+	        <th data-id="column-1">Column 1</th>
+	        <th data-id="column-2">Column 2</th>
+	        <th data-id="column-3">Column 3</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+			<tr><td>Column 1 Row 1</td><td>Column 2 Row 1</td><td>Column 2 Row 1</td></tr>
+			<tr><td>Column 1 Row 2</td><td>Column 2 Row 2</td><td>Column 2 Row 2</td></tr>
+			<tr><td>Column 1 Row 3</td><td>Column 2 Row 3</td><td>Column 2 Row 3</td></tr>
+	    </tbody>
+	  </table>
+		<div class="table-bbar">
+			<div class="pull-left">
+				<div class="dataTables_info" id="example_info">Showing 1 to 3 of 30 records</div>
+			</div>
+			<div style="margin:0px;" class="pull-right pagination">
+				<ul>
+				          <li class="disabled"><a href="#">«</a></li>
+				          <li class="active"><a href="#">1</a></li>
+				          <li><a href="#">2</a></li>
+				          <li><a href="#">3</a></li>
+				          <li class="disabled"><a href="#">...</a></li>
+				          <li><a href="#">»</a></li>
+				        </ul>
+			</div>
+		</div>
+    </div>
+
+</section>
+
+
+
+
+<!-- ===== Success ===== -->
+<section>	
+	
+	<h2>Success No Records</h2>
+	<p>Server returned successfully but with no records</p>
+	
+	<div class="row">
+    <div class="span6">
+	<h3>Test</h3>
+		<table data-role="table" url="./json/no-records.json" size="3" class="table table-bordered table-striped">
+		<thead>
+	      <tr>
+	        <th data-id="column-1">Column 1</th>
+	        <th data-id="column-2">Column 2</th>
+	        <th data-id="column-3">Column 3</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	    </tbody>
+	  </table>
+	</div>
+	<div class="span6">
+		<h3>Expected Result</h3>
+		<table class="table table-bordered table-striped">
+		<thead>
+	      <tr>
+	        <th data-id="column-1">Column 1</th>
+	        <th data-id="column-2">Column 2</th>
+	        <th data-id="column-3">Column 3</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+			<tr><td>Column 1 Row 1</td><td>Column 2 Row 1</td><td>Column 2 Row 1</td></tr>
+			<tr><td>Column 1 Row 2</td><td>Column 2 Row 2</td><td>Column 2 Row 2</td></tr>
+			<tr><td>Column 1 Row 3</td><td>Column 2 Row 3</td><td>Column 2 Row 3</td></tr>
+	    </tbody>
+	  </table>
+		<div class="table-bbar">
+			<div class="pull-left">
+				<div class="dataTables_info" id="example_info">Showing 1 to 3 of 30 records</div>
+			</div>
+			<div style="margin:0px;" class="pull-right pagination">
+				<ul>
+				          <li class="disabled"><a href="#">«</a></li>
+				          <li class="active"><a href="#">1</a></li>
+				          <li><a href="#">2</a></li>
+				          <li><a href="#">3</a></li>
+				          <li class="disabled"><a href="#">...</a></li>
+				          <li><a href="#">»</a></li>
+				        </ul>
+			</div>
+		</div>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ===== Errors ===== -->
+<section>
+  <div class="page-header">
+    <h1>Errors <small>Headings, paragraphs, lists, and other inline type elements</small></h1>
+  </div>
+
+	<h2>No URL Provided</h2>
+	<p>When no url is provided</p>
+	
+<div class="row">
+    
+<div class="span6">
+	<h3>Test</h3>
+		<table data-role="table" class="table table-bordered table-striped">
+		<thead>
+	      <tr>
+	        <th data-id="column-1">Column 1</th>
+	        <th data-id="column-2">Column 2</th>
+	        <th data-id="column-3">Column 3</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	    </tbody>
+	  </table>
+	</div>
+	
+	<div class="span6">
+		<h3>Expected Result</h3>
+		<table class="table table-bordered table-striped">
+				<thead>
+			      <tr>
+			        <th data-id="column-1">Column 1</th>
+			        <th data-id="column-2">Column 2</th>
+			        <th data-id="column-3">Column 3</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			    <tr class="alert-error"><td colspan="3"><strong>Oh snap!</strong> We couldn't finde a url to load this table.</td></tr></tbody>
+			  </table>
+    </div>
+ </div>
+
+<section>
+	
+</section>
+
+	<h2>No Response From Server</h2>
+	<p>If the server response in not valid json, this can be caused by a 404 bad url, 500 internal error</p>
+
+<div class="row">
+
+<div class="span6">
+	<h3>Test</h3>
+		<table data-role="table" url="/some/face/url/" class="table table-bordered table-striped">
+		<thead>
+	      <tr>
+	        <th data-id="column-1">Column 1</th>
+	        <th data-id="column-2">Column 2</th>
+	        <th data-id="column-3">Column 3</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	    </tbody>
+	  </table>
+	</div>
+
+	<div class="span6">
+		<h3>Expected Result</h3>
+		<table class="table table-bordered table-striped" url="/some/face/url/" data-role="table">
+				<thead>
+			      <tr>
+			        <th data-id="column-1">Column 1</th>
+			        <th data-id="column-2">Column 2</th>
+			        <th data-id="column-3">Column 3</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			    <tr class="alert-error"><td colspan="3"><strong>Oh snap!</strong> The table failed to load from the remote url.</td></tr></tbody>
+			  </table>
+    </div>
+ </div>
+
+
+
+
+
+
+
+</section>
+
+
+     <!-- Footer
+      ================================================== -->
+      <footer class="footer">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>Designed and built with all the love in the world to work with twitter <a href="http://twitter.github.com/bootstrap/" target="_blank">bootstrap</a> by <a href="http://ozblog.com/about/" target="_blank">Levi Putna</a></p>
+        <p>Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p>Icons from <a href="http://glyphicons.com">Glyphicons Free</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+      </footer>
+
+    </div><!-- /container -->
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.js"></script>
+	<script type="text/javascript" src="./javascript/bootstrap-table.js"></script>
+	<script type="text/javascript" src="./javascript/documentation.js"></script>
+  </body>
+</html>
