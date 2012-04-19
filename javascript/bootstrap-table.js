@@ -191,7 +191,7 @@
     $.table.defaultOptions = {
         initSelector: "table[data-role='table']",
 		size: 10,
-		requestType: 'GET',
+		requestType: 'POST',
     };
 
     $.fn.table = function(options){
