@@ -91,6 +91,7 @@
          base.load = function(){
 			var option = $.extend({},base.systemParameters, base.parameters);
 			var url = (base.options.absolute) ? (base.absoluteURL(base.options.url)) : base.options.url;
+			alert(url);
 			var request = $.ajax({
 				context: base,
 			  	type: base.options.requestType,
