@@ -90,11 +90,8 @@
         // Sample Function, Uncomment to use
          base.load = function(){
 			var option = $.extend({},base.systemParameters, base.parameters);
-			
-			var url = (base.options.domain != null) ? (base.options.domain + base.options.url) || base.options.url;
-			
-			
-	
+			var url = (base.options.domain != null) ? (base.options.domain + base.options.url) : base.options.url;
+
 			var request = $.ajax({
 				context: base,
 			  	type: base.options.requestType,
