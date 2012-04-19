@@ -96,7 +96,7 @@
 			  	type: base.options.requestType,
 			  	url: base.options.url,
 			  	data: option,
-				dataType: 'JSONP',
+				dataType: 'json',
 				success: function(data) {
 					if(!data){
 						base.errorMessage(base.message.requestError);
