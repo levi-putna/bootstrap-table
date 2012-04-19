@@ -90,6 +90,10 @@
         // Sample Function, Uncomment to use
          base.load = function(){
 			var option = $.extend({},base.systemParameters, base.parameters);
+			
+			var url = (base.options.domain != null) ? (base.options.domain + base.options.url) || base.options.url;
+			
+			
 	
 			var request = $.ajax({
 				context: base,
@@ -192,6 +196,7 @@
         initSelector: "table[data-role='table']",
 		size: 10,
 		requestType: 'POST',
+		domain: null
     };
 
     $.fn.table = function(options){
@@ -204,7 +209,7 @@
 
 	//auto self-init
 	$(document).ready(function(){
-		$(document).table();
+		$(document).table({domain:'http://levi-putna.github.com/bootstrap-table/'});
 	});
 
 })(jQuery);
