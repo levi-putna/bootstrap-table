@@ -91,11 +91,10 @@
          base.load = function(){
 			var option = $.extend({},base.systemParameters, base.parameters);
 			var url = (base.options.absolute) ? (base.absoluteURL(base.options.url)) : base.options.url;
-			console.log(base.absoluteURL(base.options.url));
 			var request = $.ajax({
 				context: base,
 			  	type: base.options.requestType,
-			  	url: base.options.url,
+			  	url: url,
 			  	data: option,
 				dataType: 'json',
 				success: function(data) {
@@ -186,16 +185,13 @@
 		};
 		
 		 base.absoluteURL = function(url){
-			
-			//if(!url.startsWith("http"));
-			
 		    var img = document.createElement('img');
 		    img.src = url; // set string url
 		    url = img.src; // get qualified url
 		    img.src = null; // no server request
+			alert("After = " + url);
 		    return url;
 		}
-		
 
         // Run initializer
         base.init();
