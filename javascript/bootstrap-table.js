@@ -90,6 +90,7 @@
         // Sample Function, Uncomment to use
          base.load = function(){
 			var option = $.extend({},base.systemParameters, base.parameters);
+
 			var url = (base.options.domain != null) ? (base.options.domain + base.options.url) : base.options.url;
 
 			var request = $.ajax({
@@ -199,7 +200,7 @@
     $.fn.table = function(options){
 		options = options || {};
 			return this.find(options.initSelector || $.table.defaultOptions.initSelector).each(function(index) {
-				(new $.table(this, $.table.defaultOptions));			
+				(new $.table(this, options));			
 			})
 		//return (new $.table(this, options));
     };
