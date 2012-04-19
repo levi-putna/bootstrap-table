@@ -90,9 +90,8 @@
         // Sample Function, Uncomment to use
          base.load = function(){
 			var option = $.extend({},base.systemParameters, base.parameters);
-
-			var url = (base.options.domain != null) ? (base.options.domain + base.options.url) : base.options.url;
-
+			var url = (base.options.absolute) ? (base.absoluteURL(base.options.url)) : base.options.url;
+			console.log(url);
 			var request = $.ajax({
 				context: base,
 			  	type: base.options.requestType,
@@ -185,6 +184,15 @@
 			base.$el.find('tbody tr').remove();
 			base.$el.find('tbody:last').append('<tr class="alert-error"><td colspan="' + columnCount + '">' + message + '</td></tr>');
 		};
+		
+		 base.absoluteURL = function(url){
+		    var img = document.createElement('img');
+		    img.src = url; // set string url
+		    url = img.src; // get qualified url
+		    img.src = null; // no server request
+		    return url;
+		}
+		
 
         // Run initializer
         base.init();
@@ -194,7 +202,7 @@
         initSelector: "table[data-role='table']",
 		size: 10,
 		requestType: 'POST',
-		domain: null
+		absolute: false
     };
 
     $.fn.table = function(options){
@@ -204,10 +212,5 @@
 			})
 		//return (new $.table(this, options));
     };
-
-	//auto self-init
-	$(document).ready(function(){
-		$(document).table({domain:'http://levi-putna.github.com/bootstrap-table/'});
-	});
 
 })(jQuery);
