@@ -186,6 +186,9 @@
 		};
 		
 		 base.absoluteURL = function(url){
+			
+			//if(!url.startsWith("http"));
+			
 		    var img = document.createElement('img');
 		    img.src = url; // set string url
 		    url = img.src; // get qualified url
